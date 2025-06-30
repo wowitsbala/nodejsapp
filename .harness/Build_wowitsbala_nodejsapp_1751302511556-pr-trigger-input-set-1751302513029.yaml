@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_wowitsbala_nodejsapp_1751302511556-pr-trigger-input-set
+  identifier: Build_wowitsbala_nodejsapp_1751302511556prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Project003
+  pipeline:
+    identifier: Build_wowitsbala_nodejsapp_1751302511556
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
