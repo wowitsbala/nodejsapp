@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_wowitsbala_nodejsapp_1751302511556-push-trigger-input-set
+  identifier: Build_wowitsbala_nodejsapp_1751302511556pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Project003
+  pipeline:
+    identifier: Build_wowitsbala_nodejsapp_1751302511556
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
