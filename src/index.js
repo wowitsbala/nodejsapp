@@ -1,13 +1,8 @@
 const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
+   const app = express();
 
-app.get('/', (req, res) => {
-  res.json({ message: 'Hello from Node.js!' });
-});
+   app.get('/', (req, res) => {
+     res.json({ message: 'Hello from Node.js!' });
+   });
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
-
-module.exports = app;
+   module.exports = app;
