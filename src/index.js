@@ -1,8 +1,8 @@
 const express = require('express');
-   const app = express();
+const app = express();
 
-   app.get('/', (req, res) => {
-     res.json({ message: 'Hello from Node.js!' });
-   });
+app.get('/', (req, res) => {
+  res.json({ message: 'Hello from Node.js!' });
+});
 
-   module.exports = app;
+module.exports = app;
