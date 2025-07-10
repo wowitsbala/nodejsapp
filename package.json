@@ -1,21 +1,19 @@
 {
-     "name": "nodejs-sample",
-     "version": "1.0.0",
-     "description": "Sample Node.js app for Harness CI pipeline",
-     "main": "src/index.js",
-     "scripts": {
-       "start": "node src/server.js",
-       "test": "mocha test/*.test.js --reporter mocha-junit-reporter --reporter-options mochaFile=report.xml",
-       "build": "echo 'Building Node.js app'"
-     },
-     "dependencies": {
-       "express": "^4.18.2"
-     },
-     "devDependencies": {
-       "mocha": "^10.2.0",
-       "mocha-junit-reporter": "^2.2.0",
-       "supertest": "^6.3.3"
-     },
-     "author": "",
-     "license": "ISC"
-   }
+  "name": "nodejs-sample",
+  "version": "1.0.0",
+  "description": "Simple Express.js app for CI pipeline",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "mocha --reporter mocha-junit-reporter --reporter-options mochaFile=report.xml test/**/*.test.js",
+    "build": "docker build -t nodejs-sample ."
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mocha-junit-reporter": "^2.0.2",
+    "supertest": "^6.3.3"
+  }
+}
