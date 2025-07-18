@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: {{ .Release.Name }}-nodejs-sample
+     labels:
+       app: nodejs-sample
+   spec:
+     replicas: {{ .Values.replicaCount }}
+     selector:
+       matchLabels:
+         app: nodejs-sample
+     template:
+       metadata:
+         labels:
+           app: nodejs-sample
+       spec:
+         containers:
+           - name: nodejs-sample
+             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+             imagePullPolicy: {{ .Values.image.pullPolicy }}
+             ports:
+               - containerPort: 3000
