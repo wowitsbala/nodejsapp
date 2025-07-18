@@ -1,0 +1,9 @@
+replicaCount: 1
+   image:
+     repository: us-central1-docker.pkg.dev/e-object-464615-s6/nodejs-sample/nodejs-sample
+     tag: "<+pipeline.sequenceId>"
+     pullPolicy: IfNotPresent
+   service:
+     type: ClusterIP
+     port: 80
+     targetPort: 3000
